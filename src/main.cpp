@@ -1,18 +1,16 @@
 #include <Arduino.h>
-// #include <FastAccelStepper.h>
+#include <FastAccelStepper.h>
 #include "pins.h"
 #include "config.h"
-// FastAccelStepperEngine engine = FastAccelStepperEngine();
-// FastAccelStepper *stepper = NULL;
+FastAccelStepperEngine engine = FastAccelStepperEngine();
+FastAccelStepper *stepper = NULL;
 
 
 void setup() {
-    // engine.init();
-    // stepper = engine.stepperConnectToPin(pins::STEPPER);
-
-    // write your initialization code here
+    engine.init();
+    stepper = engine.stepperConnectToPin(pins::STEPPER);
 }
 
 void loop() {
-    // write your code here
+    
 }
