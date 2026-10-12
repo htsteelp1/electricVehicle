@@ -14,6 +14,8 @@ void setup() {
         stepper->setSpeedInHz(config::bottleSpeed);
         stepper->setAcceleration(derived::stepAccel);
         stepper->setCurrentPosition(0);
+        stepper->moveTo(derived::lineStepPosition);
+        while (stepper->isRunning()) {}
     }
 }
 
