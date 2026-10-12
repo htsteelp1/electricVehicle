@@ -5,4 +5,5 @@ namespace pins {
     constexpr int MOTOR1B = 1;
     constexpr int MOTOR2B = 1;
     constexpr int STEPPER = 1;
+    constexpr int DIRECTION = 1;
 }
