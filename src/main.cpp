@@ -11,7 +11,7 @@ void setup() {
     stepper = engine.stepperConnectToPin(pins::STEPPER);
     if (stepper) {
         stepper->setDirectionPin(pins::DIRECTION);
-        stepper->setSpeedInHz(config::bottleSpeed);
+        stepper->setSpeedInHz(derived::stepBottleSpeed);
         stepper->setAcceleration(derived::stepAccel);
         stepper->setCurrentPosition(0);
         stepper->moveTo(derived::lineStepPosition);

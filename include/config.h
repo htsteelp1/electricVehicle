@@ -25,6 +25,7 @@ namespace derived {
     constexpr int lineStepPosition = toSteps(config::linePosition);
     constexpr int targetStepPosition = toSteps(config::targetPosition);
     constexpr int stepAccel = toSteps(config::accelSpeed);
+    constexpr int stepBottleSpeed = toSteps(config::bottleSpeed);
     constexpr int accelV = config::accelSpeed*config::circumference;
     const double lineToTargetTime = config::targetTime -
         (accelV*config::linePosition+std::pow(config::bottleSpeed,2))/(accelV*config::bottleSpeed);
