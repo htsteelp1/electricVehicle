@@ -18,8 +18,9 @@ namespace derived {
 
 
     constexpr int toSteps(const double distance) {
-        const double steps = distance / stepSize;
-        return static_cast<int>(steps >= 0 ? steps + 0.5 : steps - 0.5);
+        return static_cast<int>(distance >= 0
+           ? distance / stepSize + 0.5
+           : distance / stepSize - 0.5);
     }
 
     constexpr int lineStepPosition = toSteps(config::linePosition);
